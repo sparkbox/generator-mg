@@ -1,0 +1,40 @@
+{
+  "name": "generator-mg",
+  "version": "0.1.0",
+  "description": "Mg is the starting point for all frontend projects at Sparkbox",
+  "keywords": [
+    "yeoman-generator", "sparkbox", "mg", "project-init"
+  ],
+  "homepage": "https://github.com/sparkbox/generator-mg",
+  "bugs": "https://github.com/sparkbox/generator-mg/issues",
+  "author": {
+    "name": "Adam Simpson",
+    "email": "adam@heysparkbox.com"
+  },
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sparkbox/generator-mg.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.13.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
