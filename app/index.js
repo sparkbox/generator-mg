@@ -41,7 +41,7 @@ MgGenerator.prototype.app = function app() {
 MgGenerator.prototype.projectfiles = function projectfiles() {
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
-  this.template('_bowerrc', 'bowerrc');
+  this.template('_bowerrc', '.bowerrc');
   this.template('_Gruntfile.coffee', 'Gruntfile.coffee');
 };
 
