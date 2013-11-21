@@ -59,4 +59,5 @@ MgGenerator.prototype.runtime = function runtime() {
   this.directory('features', 'features');
   this.directory('reports', 'reports');
   this.directory('opt-imgs', 'opt-imgs');
+  this.directory('options', 'options');
 };
