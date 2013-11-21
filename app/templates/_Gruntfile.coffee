@@ -127,6 +127,7 @@ module.exports = (grunt) ->
       main:
         files: [
           expand: true
+          dot: true
           cwd:'public/'
           src: ["**"]
           dest: "dist/"
