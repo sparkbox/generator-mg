@@ -24,7 +24,7 @@ MgGenerator.prototype.askFor = function askFor() {
 
   var prompts = [{
     name: 'projectName',
-    message: 'Would you like to call this project?',
+    message: 'What would you like to call this project?',
   }];
 
   this.prompt(prompts, function (props) {
