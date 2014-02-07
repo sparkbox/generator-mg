@@ -1,5 +1,5 @@
 title: YAML Resources
 
-resources:
+item:
   - http://yamllint.com/
   - http://nodeca.github.io/js-yaml/

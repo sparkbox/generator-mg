@@ -2,13 +2,21 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
-
+var chalk = require('chalk');
 
 var MgGenerator = module.exports = function MgGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
-    this.installDependencies({ skipInstall: options['skip-install'] });
+
+    this.installDependencies({ 
+      skipInstall: options['skip-install'],
+      callback: function () {
+        console.log(chalk.red("Run ") + chalk.bold.yellow("'grunt'") + chalk.red(" to build out your assets"));
+        console.log(chalk.red("Run ") + chalk.bold.yellow("'grunt server'") + chalk.red(" to spin up a local web server to view your project"));
+      }
+    });
+
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
@@ -55,8 +63,9 @@ MgGenerator.prototype.runtime = function runtime() {
   this.directory('coffee', 'coffee');
   this.directory('data', 'data');
   this.directory('specs', 'specs');
-  this.directory('partials', 'partials');
+  this.directory('templates', 'templates');
   this.directory('features', 'features');
   this.directory('reports', 'reports');
   this.directory('opt-imgs', 'opt-imgs');
+  this.directory('grunt', 'grunt');
 };
