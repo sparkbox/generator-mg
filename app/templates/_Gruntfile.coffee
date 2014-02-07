@@ -11,12 +11,15 @@ module.exports = (grunt) ->
   # Clean, compile and concatenate JS
   grunt.registerTask "javascript:dev", [ "coffee", "concat:js", "jasmine", "cucumberjs", "plato" ]
 
-  grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "modernizr", "jasmine", "cucumberjs" ]
+  grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "jasmine", "cucumberjs" ]
+
+  # Cache Busting
+  grunt.registerTask "bustcache", ["bushcaster:main", "string-replace:dist"]
 
   # Build tasks
   grunt.registerTask "buildDev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "grunticon"]
 
-  grunt.registerTask "buildProduction", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "grunticon"]
+  grunt.registerTask "buildProduction", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "grunticon", "bustcache"]
 
   grunt.registerTask "server", ["connect", "watch"]
 
