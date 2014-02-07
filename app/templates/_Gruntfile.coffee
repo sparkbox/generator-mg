@@ -1,10 +1,12 @@
 module.exports = (grunt) ->
 
-  # Tasks
-  grunt.registerTask "bower", [ "copy:bower_jquery", "copy:bower_modernizr" ]
-  
+  grunt.initConfig pkg: require("./package.json")
+
+  ##### Tasks ######
+  grunt.loadTasks "grunt"
+ 
   # NOTE: this has to wipe out everything
-  grunt.registerTask "root-canal", [ "clean:all", "bower", "copy:main", "copy:img"]
+  grunt.registerTask "root-canal", [ "clean:all", "copy:main", "bower", "copy:img"]
 
   grunt.registerTask "optimizeImages", ["imageoptim", "copy:img"]
 
@@ -14,12 +16,12 @@ module.exports = (grunt) ->
   grunt.registerTask "javascript:dist", [ "coffee", "concat:js", "modernizr", "jasmine", "cucumberjs" ]
 
   # Build tasks
-  grunt.registerTask "build --dev", [ "root-canal", "javascript:dev", "compass:dev", "assemble"]
+  grunt.registerTask "buildDev", [ "root-canal", "javascript:dev", "compass:dev", "assemble"]
 
-  grunt.registerTask "build --production", [ "root-canal", "javascript:dist", "compass:dist", "assemble" ]
+  grunt.registerTask "buildProduction", [ "root-canal", "javascript:dist", "compass:dist", "assemble" ]
 
   grunt.registerTask "server", ["connect", "watch"]
 
   # Default task
-  grunt.registerTask "default", "build --dev"
+  grunt.registerTask "default", "buildDev"
 
