@@ -63,7 +63,7 @@ MgGenerator.prototype.runtime = function runtime() {
   this.directory('coffee', 'coffee');
   this.directory('data', 'data');
   this.directory('specs', 'specs');
-  this.directory('partials', 'partials');
+  this.directory('templates', 'templates');
   this.directory('features', 'features');
   this.directory('reports', 'reports');
   this.directory('opt-imgs', 'opt-imgs');

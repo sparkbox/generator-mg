@@ -1,10 +1,15 @@
 module.exports = (grunt) ->
   grunt.config "assemble",
-  options:
-    partials: "partials/*"
-    data: "data/*.yml"
-  index:
-    src: "partials/index.hbs"
-    dest: "dist/index.html"
+    options:
+      partials: "templates/partials/*"
+      data: "data/*.yml"
+      layoutdir: "templates/layouts/"
+      layout: ['default.hbs']
+    files:
+      expand: true
+      cwd: 'templates/pages'
+      src: ['*.hbs']
+      dest: './dist/'
 
   grunt.loadNpmTasks 'assemble'
+
