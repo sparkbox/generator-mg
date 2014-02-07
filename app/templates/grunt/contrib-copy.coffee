@@ -7,12 +7,5 @@ module.exports = (grunt) ->
         src: ["**"]
         dest: "dist/"
       ]
-    img:
-      files: [
-        expand: true
-        cwd:'opt-imgs/'
-        src: ["**"]
-        dest: "dist/img"
-      ]
 
   grunt.loadNpmTasks 'grunt-contrib-copy'
