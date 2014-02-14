@@ -6,5 +6,7 @@ $breakpoint-no-queries: false;
 $breakpoint-no-query-wrappers: true;
 $nomq: ".lt-ie9 &, .no-mq";
 $hi-res: "@media (-webkit-min-device-pixel-ratio: 1.5, only screen) and (-o-min-device-pixel-ratio: 3/2, only screen) and (min-device-pixel-ratio: 1.5)";
+$no-mq-support: false !default;
+$serve-to-nomq-max-width: 60em !default;
 
 // Font Families

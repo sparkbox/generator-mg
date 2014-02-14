@@ -9,12 +9,8 @@ module.exports = (grunt) ->
     options:
       livereload: true
 
-  images:
-    files: "opt-imgs/*"
-    tasks: "optimizeImages"
-
   partials:
-    files: ["partials/*", "data/*"]
+    files: ["templates/**/*", "data/*"]
     tasks: ["assemble"]
     options:
       livereload: true
