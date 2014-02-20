@@ -1,6 +1,6 @@
 {
   "name": "generator-mg",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Mg is the starting point for all frontend projects at Sparkbox",
   "keywords": [
     "yeoman-generator",
