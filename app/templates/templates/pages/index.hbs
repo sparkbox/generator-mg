@@ -1,7 +1,22 @@
+---
+title: Table of Contents
+---
 <h1>{{index.title}}</h1>
+<h2>Handlebars Pages List</h2>
+<ul>
+  {{#each pages}}
+    <li>
+      <a href="{{filename}}">
+      {{#if data.title}}{{data.title}}{{/if}}
+      {{#unless data.title}}{{basename}}{{/unless}}
+      </a>
+    </li>
+  {{/each}}
+</ul>
+
+<h2>YAML File List</h2>
 <ul>
   {{#each index.items}}
     <li><a href="{{this}}">{{this}}</a></li>
   {{/each}}
 </ul>
-
