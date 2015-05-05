@@ -1,6 +1,17 @@
 module.exports = (grunt) ->
 
-  grunt.initConfig pkg: require("./package.json")
+  grunt.initConfig
+    pkg: require("./package.json")
+
+    scssFiles:
+      files: [
+        expand: true # Enable dynamic expansion.
+        cwd: "scss/" # Src matches are relative to this path.
+        src: ["**/*.scss"] # Actual pattern(s) to match.
+        dest: "dist/css/" # Destination path prefix.
+        ext: ".css" # Dest filepaths will have this extension.
+        extDot: "first" # Extensions in filenames begin after the first dot
+      ]
 
   ##### Tasks ######
   grunt.loadTasks "grunt"
@@ -17,9 +28,9 @@ module.exports = (grunt) ->
   grunt.registerTask "bustcache", ["bushcaster:main", "string-replace:dist"]
 
   # Build tasks
-  grunt.registerTask "buildDev", [ "root-canal", "javascript:dev", "compass:dev", "assemble", "grunticon"]
+  grunt.registerTask "buildDev", [ "root-canal", "javascript:dev", "sass:dev", "assemble", "grunticon"]
 
-  grunt.registerTask "buildProduction", [ "root-canal", "javascript:dist", "compass:dist", "assemble", "grunticon", "bustcache"]
+  grunt.registerTask "buildProduction", [ "root-canal", "javascript:dist", "sass:prod", "assemble", "grunticon", "bustcache"]
 
   grunt.registerTask "server", ["connect", "watch"]
 
