@@ -55,9 +55,6 @@ MgGenerator.prototype.projectfiles = function projectfiles() {
 
 MgGenerator.prototype.runtime = function runtime() {
   this.copy('gitignore', '.gitignore');
-  this.copy('Gemfile', 'Gemfile');
-  this.copy('Gemfile.lock', 'Gemfile.lock');
-  this.copy('config.rb', 'config.rb');
   this.directory('public', 'public');
   this.directory('scss', 'scss');
   this.directory('coffee', 'coffee');
