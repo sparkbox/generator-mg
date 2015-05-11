@@ -56,10 +56,6 @@ Templating is handled by the [Assemble](http://assemble.io) plugin. Any files in
 
 To stay up to date with the latest build of Mg, run `npm update -g generator-mg` periodically on your system.
 
-### Known Issues
-
-* If Compass errors about the `sb-media` mixin being unable to accept content blocks, please ensure that the `sass gem` is `> 3.2.7`.
-
 ### Getting To Know Yeoman
 
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
