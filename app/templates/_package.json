@@ -13,7 +13,7 @@
     "grunt-notify": "~0.4.1",
     "grunt-styleguide": "~0.2.4",
     "grunt-cucumber": "~0.3.0",
-    "grunt-plato": "~0.2.0",
+    "grunt-plato": "~1.2.1",
     "grunt-contrib-copy": "~0.4.1",
     "assemble": "~0.4.13",
     "grunt-contrib-connect": "~0.5.0",
