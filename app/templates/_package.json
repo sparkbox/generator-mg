@@ -20,7 +20,7 @@
     "connect-livereload": "~0.5.3",
     "grunt-grunticon": "~2.2.0",
     "grunt-bower": "~0.19.0",
-    "grunt-bushcaster": "0.0.7",
+    "grunt-bushcaster": "0.1.0",
     "grunt-string-replace": "~0.2.7"
   }
 }
