@@ -14,7 +14,7 @@
     "grunt-styleguide": "~0.2.4",
     "grunt-cucumber": "~0.3.0",
     "grunt-plato": "~1.2.1",
-    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-copy": "~0.8.0",
     "assemble": "~0.4.13",
     "grunt-contrib-connect": "~0.5.0",
     "connect-livereload": "~0.3.0",
